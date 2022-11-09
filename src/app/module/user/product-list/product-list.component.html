@@ -1,0 +1,25 @@
+<input type="text" #movieSearchInput class="form-control" placeholder="Type any movie name" />
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Brand</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of prouctList;let i=index;">
+        <th scope="row">{{i}}</th>
+        <td>{{data.title}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.stock}}</td>
+        <td>{{data.brand}}</td>
+        <td>
+            <button type="button" class="btn btn-secondary btn-sm">Add To Cart</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
